@@ -1,0 +1,251 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");
+
+$fa-font-path: "~font-awesome/fonts/";
+@import "node_modules/font-awesome/scss/font-awesome";
+
+// Variables
+@import "variables";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap-table/dist/bootstrap-table";
+@import "node_modules/bootstrap-select/sass/bootstrap-select";
+
+@import "node_modules/icheck-material/icheck-material.min";
+@import "node_modules/toastr/build/toastr";
+
+@import "node_modules/admin-lte/dist/css/adminlte.min";
+
+
+body {
+    overflow-x: hidden
+}
+
+a {
+    color: #c6b093;
+} a:hover {
+    color: #c6b093
+}
+
+.form-control {
+    height: 38px;
+}
+
+.card-table {
+    padding: 0 10px;
+}
+
+.card-title .fa-info-circle {
+    margin-top:2px
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #343a40;
+}
+
+.content-wrapper, .main-footer, .main-header {
+    margin-left: 0 !important
+}
+
+#toast-container > div {
+    box-shadow: 0 0 10px 0 rgba(52, 58, 64, 0.64);
+}
+
+.text-pre-wrap {
+    white-space: pre-wrap
+}
+
+// loader
+
+#pageloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1035;
+    background: #121212;
+}
+
+.loader {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    div {
+        position: absolute;
+        border: 5px solid #eee;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+        &:nth-child(2) {
+            animation-delay: -0.35s;
+        }
+    }
+}
+
+@keyframes lds-ripple {
+    0% {
+      top: 35px;
+      left: 35px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: -1px;
+      left: -1px;
+      width: 70px;
+      height: 70px;
+      opacity: 0;
+    }
+}
+
+// profile 
+
+.nav-user {
+    padding: 1px 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: #44494f;
+    display: block;
+}
+
+.box-profile .img-circle {
+    line-height: 120px;
+    height: 126px;
+    width: 126px;
+    padding: 0;
+    font-size: 75px;
+    background: #fcf3ca;
+    border: 3px solid #f3d540;
+    margin-bottom: 11px;
+}
+
+.dashboard .small-box .icon {
+    display: block;
+}
+
+// bootstrap table
+
+.bootstrap-table .fixed-table-container .fixed-table-body .fixed-table-loading {
+    z-index: 998;
+}
+
+.page-item.active .page-link {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.page-link, .page-link:hover {
+    color: #343a40;
+}
+
+table .actions-column {
+    width: 1%;
+    white-space: nowrap;
+
+    i {
+        font-size: 21px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .7
+        }
+    }
+}
+
+.table-action-btn {
+    float: right;
+    margin-top: 10px;
+    height: 37px;
+    padding: 0.325rem 0.75rem;
+}
+
+/* auth */
+
+.auth {
+    a:hover {
+        color: #fff;
+        text-decoration: underline
+    }
+
+    .col-lg-7 {
+        &:nth-of-type(1) {
+            background-size: cover !important;
+        }
+
+        .h-100 {
+            width: 87px;
+            margin-right: -10px;
+        }
+    }
+
+    .col-lg-5 {
+        background-color: #121212;
+    }
+
+    .input-group-text {
+        color: #121212;
+        border-top-left-radius: 23px !important;
+        border-bottom-left-radius: 23px !important;
+        border-right: 0;
+        width: 46px;
+        height: 46px;
+    }
+
+    .form-control {
+        height: 46px;
+        border-top-right-radius: 23px !important;
+        border-bottom-right-radius: 23px !important;
+        font-weight: 600;
+    }
+
+    button {
+        color: #121212;
+        background-color: #ffc849;
+        height: 46px;
+        border-radius: 23px;
+        border: 0
+    }
+
+    .icheck-material label::before {
+        border-radius: 11px !important;
+        background-color: #fff;
+        border: 0 !important;
+    }
+
+    .icheck-material label::after {
+        border-color: #121212 !important;
+    }
+
+    .login-box, .register-box {
+        margin: 7% auto;
+    }
+}
+
+// pagination
+
+@media (max-width: 575px) {
+    .table-action-btn {
+        float: initial;
+        width: 100%;
+    }
+
+    .content-header .btn {
+        width: 100%;
+        margin-top: 15px
+    }
+}
